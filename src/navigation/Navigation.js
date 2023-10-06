@@ -39,6 +39,9 @@ import Courses from '../screens/Courses/Courses';
 import StartInterview from '../screens/StartInterview/StartInterview';
 import Interview from '../screens/Interview/Interview';
 import LindedinJobs from '../screens/LindedinJobs/LindedinJobs';
+import ChatFeature from '../screens/ChatFeature/ChatFeature';
+import FbLogin1 from '../screens/FireBase/FbLogin1';
+import RegisterL from '../screens/FireBase/RegisterL';
 
 
 
@@ -53,7 +56,7 @@ function Navigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="Splash"
+                initialRouteName="FbLogin1"
                 screenOptions={{ headerShown: false }}>
                  <Stack.Screen name="Splash" component={Splash} />
                 <Stack.Screen name="IntroScreen" component={IntroScreen} />
@@ -95,10 +98,13 @@ function Navigation() {
                 <Stack.Screen name="LindedinJobs" component={LindedinJobs} />
                 <Stack.Screen name="Courses" component={Courses} />
                 <Stack.Screen name="Interview" component={Interview} />
-                
+                <Stack.Screen name="ChatFeature" component={ChatFeature} />
+                <Stack.Screen name="FbLogin1" component={FbLogin1} />
+                <Stack.Screen name="RegisterL" component={RegisterL} />
                 <Stack.Screen 
                 options={{ gestureEnabled: false }}
                 name="ClientTabNavigator" component={ClientTabNavigator} />
+
                 
 
                 
