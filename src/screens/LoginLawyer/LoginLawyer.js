@@ -63,7 +63,7 @@ function SignInPhone(props) {
         Helper.makeRequest({ url: ApiUrl.generateotp, data: body, method: "POST" }).then((data) => {
             hideLoader(false)
             console.log('-----------res:: ', data);
-            navigation.navigate("Verifyotp",{phno:number})
+            navigation.navigate("VerifyotpDoctor",{phno:number})
             if (data.status === "success") {
                 
                 Helper.showToast(data.message)
@@ -112,7 +112,7 @@ function SignInPhone(props) {
                 <View style={styles.boxCss}>
                     <View style={{ marginTop: Utils.ScreenWidth(9), marginHorizontal: Utils.ScreenWidth(4.5), }}>
                         <View style={{ marginTop: Utils.ScreenHeight(2), marginLeft: Utils.ScreenWidth(2) }}>
-                            <Text style={{ color: 'black', fontWeight: '600', fontSize: 16 }}>Login with OTP</Text>
+                            <Text style={{ color: 'black', fontWeight: '600', fontSize: 16 }}>Signup with OTP</Text>
                         </View>
                         <View style={styles.inputViewCss}>
                             <View style={styles.couterCodeViewCss}>
@@ -143,11 +143,13 @@ function SignInPhone(props) {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.navigate('Register')} style={{ justifyContent: 'center', flexDirection: 'row', marginVertical: Utils.ScreenHeight(2) }}>
+
+                    <TouchableOpacity onPress={() => navigation.navigate('TabNavigator')} style={{ justifyContent: 'center', flexDirection: 'row', marginVertical: Utils.ScreenHeight(2) }}>
                         {/* <LinearGradient start={{ x: 1, y: 0 }} end={{ x: 0, y: 0 }} colors={['#018081', '#3683A9']} style={styles.linearGradient}> */}
                         <Text style={styles.buttonText}>
                             Dont have an account?
-                            <Text style={[styles.buttonText, { color: colors.primary }]}> Signup</Text>
+                            <Text style={[styles.buttonText, { color: colors.primary }]}> Login</Text>
+
                         </Text>
                         {/* </LinearGradient> */}
                     </TouchableOpacity>
@@ -156,7 +158,9 @@ function SignInPhone(props) {
             {/* <Toast/>
             <CustomLoader loaderVisible={loaderVisible} /> */}
             <TouchableOpacity onPress={()=>
-            {navigation.navigate("Verifyotp",{phno:number})}}><Text>testings</Text></TouchableOpacity>
+
+            {navigation.navigate("VerifyotpDoctor",{phno:number})}}><Text>testings</Text></TouchableOpacity>
+
         </SafeAreaView>
     )
 }

@@ -35,8 +35,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Allow access to the photo library for selecting images</string>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires access to the camera.</string>
+	<string>Allow access to the camera for capturing images</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The app requires mic to allow doctors to create a voice prescription</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

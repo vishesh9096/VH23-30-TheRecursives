@@ -22,8 +22,15 @@ const OnboardWelcome = (props) => {
                 onPress={() => {
                     navigation.navigate('Loginclient')
                 }}
-                style={{ backgroundColor: colors.primary, width: '90%', height: 50, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginTop: Utils.ScreenHeight(15) }}>
-                    <Text style={{ fontSize: 16, fontWeight: '800', color: 'white' }}>Get Started </Text>
+                style={{ backgroundColor: colors.primary, width: '90%', height: 50, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginTop: Utils.ScreenHeight(10) }}>
+                    <Text style={{ fontSize: 16, fontWeight: '800', color: 'white' }}>Get started Client </Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                onPress={() => {
+                    navigation.navigate('LoginDoctor')
+                }}
+                style={{ backgroundColor: colors.primary, width: '90%', height: 50, borderRadius: 10, justifyContent: 'center', alignItems: 'center', marginTop: Utils.ScreenHeight(2) }}>
+                    <Text style={{ fontSize: 16, fontWeight: '800', color: 'white' }}>Get started Doctor</Text>
                 </TouchableOpacity>
 
             </View>
