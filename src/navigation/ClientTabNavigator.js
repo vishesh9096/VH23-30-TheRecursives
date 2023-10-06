@@ -138,13 +138,13 @@ function ClientTabNavigator() {
             />
 
             <Tab.Screen
-                name="community"
+                name="Crowd funcding"
                 component={community}
                 options={{
                     headerTitle: "",
                 headerLeft: (title) => {
                     return (
-                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Community</Text>
+                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Crowd funding</Text>
                     )
                 },
                 headerRight: () => {
