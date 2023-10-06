@@ -39,6 +39,7 @@ import Courses from '../screens/Courses/Courses';
 import StartInterview from '../screens/StartInterview/StartInterview';
 import Interview from '../screens/Interview/Interview';
 import LindedinJobs from '../screens/LindedinJobs/LindedinJobs';
+import policies from '../screens/policies/policies';
 
 
 
@@ -62,7 +63,7 @@ function Navigation() {
                 <Stack.Screen name="Verifyotp" component={Verifyotp} />
                 <Stack.Screen name="Notification" component={Notification} />
                 <Stack.Screen name="ClientProfile" component={ClientProfile} />
-
+                <Stack.Screen name="policies" component={policies} />
                 <Stack.Screen name="AddSchedule" component={AddSchedule} />
                 <Stack.Screen name="Register" component = {Register}/>
 
