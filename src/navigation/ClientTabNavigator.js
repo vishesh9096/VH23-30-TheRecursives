@@ -25,6 +25,7 @@ import Helper from '../Lib/Helper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import community from '../screens/community/community';
 import Analysis from '../screens/Analysis/Analysis';
+import wellbeing from '../screens/Well-being/wellbeing';
 
 
 
@@ -138,13 +139,13 @@ function ClientTabNavigator() {
             />
 
             <Tab.Screen
-                name="community"
+                name="Crowd funding"
                 component={community}
                 options={{
                     headerTitle: "",
                 headerLeft: (title) => {
                     return (
-                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Community</Text>
+                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Crowd funding</Text>
                     )
                 },
                 headerRight: () => {
@@ -257,11 +258,11 @@ function ClientTabNavigator() {
             />
             <Tab.Screen
                 name="Analysis"
-                component={Analysis}
+                component={wellbeing}
                 options={{
                     headerLeft: (title) => {
                         return (
-                            <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Analysis</Text>
+                            <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Well Being</Text>
                         )
                     },
                     headerRight: () => {
