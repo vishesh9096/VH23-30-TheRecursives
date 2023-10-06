@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from '../screens/Splash/Splash';
 import SignupLawyer from '../screens/SignupLawyer/SignupLawyer';
-import Verifyotp from '../screens/Verifyotp/Verifyotp';
+
 import Notification from '../screens/Notification/Notification';
 import Settings from '../screens/Settings/Settings';
 import VideoCall from '../screens/VideoCall/VideoCall';
@@ -14,8 +14,7 @@ import Loginclient from '../screens/Loginclient/Loginclient';
 import Verifyotpclient from '../screens/Verifyotpclient/Verifyotpclient';
 import ClientTabNavigator from './ClientTabNavigator';
 import Uploadtoipfs from '../screens/Uploadtoipfs/Uploadtoipfs';
-import LawyerDetails from '../screens/LawyerDetails/LawyerDetails';
-import BookAppoinment from '../screens/BookAppoinment/BookAppoinment';
+
 import OCR from '../screens/OCR/OCR';
 import ConnectWalletScreen from '../screens/ConnectWalletScreen/ConnectWalletScreen';
 import PersonalDetails from '../screens/PersonalDetails/PersonalDetails';
@@ -29,12 +28,16 @@ import ChatFeature from '../screens/ChatFeature/ChatFeature';
 import FbLogin1 from '../screens/FireBase/FbLogin1';
 import RegisterL from '../screens/FireBase/RegisterL';
 import policies from '../screens/policies/policies';
+
 import VerifyotpDoctor from '../screens/VerifyotpDoctor/VerifyotpDoctor';
 import DoctorPersonalDetails from '../screens/DoctorPersonalDetails/DoctorPersonalDetails';
 import DoctorProfessionalDetails from '../screens/DoctorProfessionalDetails/DoctorProfessionalDetails';
 import LetterHeadScreen from '../screens/LetterHeadScreen/LetterHeadScreen';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import LoginDoctor from '../screens/LoginLawyer/LoginLawyer';
+
+import VoicePrescription from '../screens/VoicePrescription/VoicePrescription';
+import PatientsList from '../screens/PatientsList/PatientsList';
+import LoginDoctor from '../screens/LoginLawyer/LoginDoctor';
 
 
 
@@ -56,7 +59,6 @@ function Navigation() {
                 <Stack.Screen name="IntroScreen" component={IntroScreen} />
                 <Stack.Screen name="LoginDoctor" component={LoginDoctor} />
                 <Stack.Screen name="SignupLawyer" component={SignupLawyer} />
-                <Stack.Screen name="Verifyotp" component={Verifyotp} />
                 <Stack.Screen name="Notification" component={Notification} />
                 <Stack.Screen name="ClientProfile" component={ClientProfile} />
                 <Stack.Screen name="policies" component={policies} />
@@ -66,8 +68,11 @@ function Navigation() {
                 <Stack.Screen name="Uploadtoipfs" component={Uploadtoipfs} />
                 <Stack.Screen name="DoctorPersonalDetails" component={DoctorPersonalDetails} />
                 <Stack.Screen name="DoctorProfessionalDetails" component={DoctorProfessionalDetails} />
-
-
+                <Stack.Screen name="Settings" component={Settings} />
+                <Stack.Screen name="LetterHeadScreen" component={LetterHeadScreen} />
+                <Stack.Screen name="VerifyotpDoctor" component={VerifyotpDoctor} />
+                <Stack.Screen name="VoicePrescription" component={VoicePrescription} />
+                <Stack.Screen name="PatientsList" component={PatientsList} />
 
 
 
@@ -75,20 +80,14 @@ function Navigation() {
 
 
                 
-                <Stack.Screen
-                name="Settings" component={Settings} />
 
                 
 
                 {/* Client screens */}
                 <Stack.Screen name="Loginclient" component={Loginclient} />
-                <Stack.Screen name="LetterHeadScreen" component={LetterHeadScreen} />
                 <Stack.Screen name="ConnectWalletScreen" component={ConnectWalletScreen} />
                 <Stack.Screen name="Signupclient" component={Signupclient} />
                 <Stack.Screen name="Verifyotpclient" component={Verifyotpclient} />
-                <Stack.Screen name="VerifyotpDoctor" component={VerifyotpDoctor} />
-                <Stack.Screen name="LawyerDetails" component={LawyerDetails} />
-                <Stack.Screen name="BookAppoinment" component={BookAppoinment} />
                 <Stack.Screen name="OCR" component={OCR} />
                 <Stack.Screen name="PersonalDetails" component={PersonalDetails} />
 
@@ -105,6 +104,19 @@ function Navigation() {
                 options={{ gestureEnabled: false }}
                 name="ClientTabNavigator" component={ClientTabNavigator} />
 
+                <Stack.Screen options={{ gestureEnabled: false }} name="ClientTabNavigator" component={ClientTabNavigator} />
+                
+
+
+
+
+
+
+
+
+
+
+                
                 
 
                 

@@ -12,7 +12,7 @@ import ImagesPath from "../../assests/ImagesPath";
 // import { strings } from "../LanguageScreen/StringsOfLanguages";
 // import { Toast } from "react-native-toast-message/lib/src/Toast";
 
-function SignInPhone(props) {
+function LoginDoctor(props) {
     const { navigation } = props;
 
     const [number, setNumber] = useState('');
@@ -165,4 +165,4 @@ function SignInPhone(props) {
     )
 }
 
-export default SignInPhone;
+export default LoginDoctor;

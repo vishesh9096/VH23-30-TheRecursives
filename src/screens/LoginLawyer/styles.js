@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     logoIconCss: {
         alignSelf: 'center',
         resizeMode: 'stretch',
-        height: Utils.ScreenHeight(12), // 40I
+        height: Utils.ScreenHeight(15), // 40I
         width: Utils.ScreenWidth(28), // 95
         marginVertical: Utils.ScreenWidth(2)
     },

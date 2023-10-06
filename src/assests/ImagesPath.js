@@ -22,7 +22,7 @@ const ImagesPath = {
     onafterprint: {
         MenIcon: require('./images/onboarding/men.png'),
         womenIcon: require('./images/onboarding/Women.png'),
-        intro:require('./images/onboarding/intro.png'), 
+        intro:require('./images/home/intro.png'), 
         otherIcon: require('./images/onboarding/Others_primary.png'),
         dow_arrIcon: require('./images/onboarding/dow_arr.png'),
         general_icon: require('./images/onboarding/general_icon.png'),
@@ -88,7 +88,7 @@ const ImagesPath = {
         eclipse: require('./images/home/Eclipse.jpeg'),
         soundwaves: require('./images/home/soundwaves.png'),
         micred: require('./images/home/micred.png'),
-        logo_primary: require('./images/LegalBridge/logocar.png'),
+        logo_primary: require('./images/home/choose.png'),
         download: require('./images/home/download_new.png'),
         Search_primary: require('./images/home/Search_primary.png'),
         calender: require('./images/home/calender_home.png'),
