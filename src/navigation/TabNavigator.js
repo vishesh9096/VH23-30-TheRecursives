@@ -60,7 +60,7 @@ function TabNavigator() {
                     headerTitle: "",
                 headerLeft: (title) => {
                     return (
-                        <Text style={{ color: colors.primary, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>LegalBridge</Text>
+                        <Text style={{ color: colors.primary, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Doctors</Text>
                     )
                 },
                 headerRight: () => {
