@@ -42,7 +42,7 @@ const ClientProfileScreen = () => {
 
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity
+                        {/* <TouchableOpacity
                         onPress={()=>{navigation.navigate("CheckStatus")}}
                         style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
                             <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: Utils.ScreenWidth(4), justifyContent: "space-between" }}>
@@ -51,8 +51,8 @@ const ClientProfileScreen = () => {
                                 <Image style={{ width: 30, height: 30 }} source={ImagesPath.home.arrow_covered} />
 
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
                             <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: Utils.ScreenWidth(4), justifyContent: "space-between" }}>
                                 <Text style={{ color: colors.black, fontWeight: '400', fontSize: 16 }}>Staff</Text>
 
@@ -67,7 +67,7 @@ const ClientProfileScreen = () => {
                                 <Image style={{ width: 30, height: 30 }} source={ImagesPath.home.arrow_covered} />
 
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         <TouchableOpacity style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
                             <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: Utils.ScreenWidth(4), justifyContent: "space-between" }}>
                                 <Text style={{ color: colors.black, fontWeight: '400', fontSize: 16 }}>Upload Documents</Text>

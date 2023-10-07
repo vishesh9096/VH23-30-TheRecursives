@@ -143,6 +143,21 @@ export default function VoicePrescription(props) {
           .then(response => response.json())
           .then(result =>{ console.log(result)
           setLoaderVisible(false)
+          var formdata = new FormData();
+          formdata.append("phoneNumber", "9324009992");
+          formdata.append("uri", result.file_path);
+          formdata.append("title", "Here is Your Prescription");
+
+          var requestOptions = {
+            method: 'POST',
+            body: formdata,
+            redirect: 'follow'
+          };
+
+fetch("http://127.0.0.1:3000/upload", requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
           navigation.navigate("LetterHeadScreen", {url:result.file_path})
           })
           .catch(error => {console.log('error', error)

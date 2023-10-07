@@ -167,6 +167,21 @@ setLoaderVisible(true)
 fetch("https://8344-103-134-7-130.ngrok-free.app/api/user-registration/", requestOptions)
   .then(response => response.json())
   .then(result =>{
+    var formdata = new FormData();
+        formdata.append("phoneNumber", "9324009992");
+        formdata.append("uri", result.letter_head_url);
+        formdata.append("title", "Here is Your Letter Head");
+
+        var requestOptions = {
+        method: 'POST',
+        body: formdata,
+        redirect: 'follow'
+        };
+
+fetch("http://127.0.0.1:3000/upload", requestOptions)
+  .then(response => response.json())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
     setLoaderVisible(false)
     console.log(result.letter_head_url)
     navigation.navigate("LetterHeadScreen", {url:result.letter_head_url})

@@ -45,7 +45,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://8124-103-246-224-137.ngrok-free.app/webhooks/rest/webhook/", requestOptions)
+fetch("https://ab7f-103-134-7-130.ngrok-free.app/webhooks/rest/webhook/", requestOptions)
   .then(response => response.json())
   .then(result =>{ 
     
