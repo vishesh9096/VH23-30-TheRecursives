@@ -39,8 +39,10 @@
 	<string>Allow access to the photo library for selecting images</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Allow access to the camera for capturing images</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>The app requires mic to allow doctors to create a voice prescription</string>
+	  <key>NSMicrophoneUsageDescription</key>
+  <string>Description of why you require the use of the microphone</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>Description of why you require the use of the speech recognition</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	
 	<string></string>

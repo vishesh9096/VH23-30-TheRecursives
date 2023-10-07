@@ -66,6 +66,7 @@ const DoctorPersonalDetails = React.memo((props) => {
     const [checkValidMail, setCheckValidMail] = useState('');
     const [about, setAbout] = useState('')
     const [achievements, setAchievements] = useState('');
+   
 
 
     const [valueState, setValueState] = useState('');
@@ -85,7 +86,7 @@ const DoctorPersonalDetails = React.memo((props) => {
         { label: 'MAMC New Delhi', value: 'MAMC New Delhi' }, { label: 'Jawaharlal Institute of Postgraduate Medical Education & Research', value: 'Jawaharlal Institute of Postgraduate Medical Education & Research' }
     ]);
 
-
+    
    
 
     useEffect(() => {
@@ -202,7 +203,7 @@ const DoctorPersonalDetails = React.memo((props) => {
             Helper.showToast('Please Enter a valid Email');
             return;
         }
-        let formdata = new FormData();
+        const formdata = new FormData();
         formdata.append('first_name', user.firstName);
         formdata.append('dob', dob);
         formdata.append('gender', gender);
@@ -217,6 +218,9 @@ const DoctorPersonalDetails = React.memo((props) => {
         formdata.append('Latitude', latitudesDoctor);
         console.log('-------------formdata ::: ', formdata);
         showLoader(true)
+
+    //   console.log(user,"here")
+                            navigation.navigate("DoctorProfessionalDetails",{user:formdata})
        
     }
 
@@ -525,7 +529,8 @@ const DoctorPersonalDetails = React.memo((props) => {
                     <AppButton
                         title={"Continue"}
                         buttonWidth={Utils.ScreenWidth(90)}
-                        onPress={() => { navigation.navigate("DoctorProfessionalDetails")}}
+                        onPress={() => { 
+                            spet1Api()}}
                     //onPress={() => {navigation.navigate('OnboardingScreen9')}}
                     />
                 </View>

@@ -8,15 +8,19 @@ import Pdf from "react-native-pdf";
 import { useNavigation } from "@react-navigation/native";
 
 
-const LetterHeadScreen = () => {
+const LetterHeadScreen = (props) => {
+    const { route} = props;
+
+    const pdf = route.params.url
+    console.log("final ", pdf)
 
   const navigation = useNavigation()
   const pdf_url = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
   const url = pdf_url
-  const source = { uri: pdf_url, cache: true };
+  const source = { uri: pdf, cache: true };
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: '#f8ffff' }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: colors.grey2 }}>
             {/* {upComingListData.length > 0 ? ( */}
             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: Utils.ScreenHeight(2) }}>
                 {/* <TouchableOpacity activeOpacity={0.3}
@@ -30,6 +34,7 @@ const LetterHeadScreen = () => {
                     <Image style={[styles.logoIconCss]} source={ImagesPath.home.logo_primary} />
                 </View>
             </View>
+               
             <Pdf
                     source={source}
                     onLoadComplete={(numberOfPages) => {

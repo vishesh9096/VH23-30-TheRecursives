@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native-gesture-handler'
 import { Utils, colors } from '../../contants'
@@ -9,6 +9,7 @@ const ClientSearchScreen = () => {
   const[searchtext,setSearchtext] = useState();
   const navigation = useNavigation()
   return (
+    <SafeAreaView>
     <View style={{height:Utils.ScreenHeight(100), backgroundColor:colors.white}}>  
         <View style={{
                     marginTop: Utils.ScreenHeight(2),
@@ -40,10 +41,10 @@ const ClientSearchScreen = () => {
                     </View>
                       <View>
                       <Text style={{fontWeight:600}}>Vishesh Gatha</Text>
-                      <Text style={{fontWeight:400, color:colors.grey}}>Divorce</Text>
+                      <Text style={{fontWeight:400, color:colors.grey}}></Text>
                       </View>
                       <View >
-                      <Text style={{fontWeight:600, color:colors.grey, fontSize:12}}>Exp:{'\n'}5yrs</Text>
+                      <Text style={{fontWeight:600, color:colors.grey, fontSize:12}}>Age:{'\n'}20yrs</Text>
 
                       </View>
                       <TouchableOpacity style={{backgroundColor:colors.secondary, borderRadius:12}}
@@ -54,7 +55,7 @@ const ClientSearchScreen = () => {
                           paddingHorizontal:Utils.ScreenWidth(5), color:colors.primary}}>View</Text>
                       </TouchableOpacity>
                   </View>
-                  <View style={{flexDirection:"row", 
+                  {/* <View style={{flexDirection:"row", 
                   justifyContent:"space-evenly",marginTop:Utils.ScreenHeight(1),
                   alignItems:"center", borderWidth:1, borderColor:colors.grey2, borderRadius:12, height:Utils.ScreenHeight(8)}}>
                     <View>
@@ -73,8 +74,8 @@ const ClientSearchScreen = () => {
                           fontWeight:600,
                           paddingHorizontal:Utils.ScreenWidth(5), color:colors.primary}}>View</Text>
                       </TouchableOpacity>
-                  </View>
-                  <View style={{flexDirection:"row", 
+                  </View> */}
+                  {/* <View style={{flexDirection:"row", 
                   justifyContent:"space-evenly",marginTop:Utils.ScreenHeight(1),
                   alignItems:"center", borderWidth:1, borderColor:colors.grey2, borderRadius:12, height:Utils.ScreenHeight(8)}}>
                     <View>
@@ -82,7 +83,7 @@ const ClientSearchScreen = () => {
                     </View>
                       <View>
                       <Text style={{fontWeight:600}}>Vishesh Gatha</Text>
-                      <Text style={{fontWeight:400, color:colors.grey}}>Divorce</Text>
+                      <Text style={{fontWeight:400, color:colors.grey}}></Text>
                       </View>
                       <View >
                       <Text style={{fontWeight:600, color:colors.grey, fontSize:12}}>Exp:{'\n'}5yrs</Text>
@@ -93,11 +94,12 @@ const ClientSearchScreen = () => {
                           fontWeight:600,
                           paddingHorizontal:Utils.ScreenWidth(5), color:colors.primary}}>View</Text>
                       </TouchableOpacity>
-                  </View>
+                  </View> */}
 
 
                 </View>
     </View>
+    </SafeAreaView>
   )
 }
 

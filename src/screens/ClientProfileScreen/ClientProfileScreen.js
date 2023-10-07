@@ -32,9 +32,11 @@ const ClientProfileScreen = () => {
                         </View>
                     </View>
                     <View style={{ marginHorizontal: Utils.ScreenWidth(5) }}>
-                        <TouchableOpacity style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
+                        <TouchableOpacity 
+                        onPress={()=>{navigation.navigate("ConnectDevice")}}
+                        style={{ borderWidth: 0.5, marginTop: Utils.ScreenHeight(2), borderColor: colors.grey2, borderRadius: 6, height: Utils.ScreenHeight(6), justifyContent: "center" }} >
                             <View style={{ flexDirection: "row", alignItems: "center", marginHorizontal: Utils.ScreenWidth(4), justifyContent: "space-between" }}>
-                                <Text style={{ color: colors.black, fontWeight: '400', fontSize: 16 }}>Staff</Text>
+                                <Text style={{ color: colors.black, fontWeight: '400', fontSize: 16 }}>Connect Device</Text>
 
                                 <Image style={{ width: 30, height: 30 }} source={ImagesPath.home.arrow_covered} />
 

@@ -39,7 +39,7 @@ function ClientTabNavigator() {
             <View style={isFocused ? tabStyles.imgViewOfTabs : tabStyles.viewOfTabs}>
                 <Image
                     source={activeIcon}
-                    style={[tabStyles.tabIconCss, { tintColor: isFocused ? colors.black : colors.grey, }]} />
+                    style={[tabStyles.tabIconCss, { tintColor: isFocused ? colors.primary : colors.grey, }]} />
                 <Text style={[{ fontSize: 12, marginTop: Utils.ScreenHeight(0.6) }, { color: isFocused ? colors.primary : colors.grey, }]}>{title}</Text>
             </View>
         );
@@ -49,7 +49,7 @@ function ClientTabNavigator() {
     const RenderTabIconcenter = (props) => {
         const { activeIcon, inActiveIcon, title, isFocused } = props;
         return (
-            <View style={{position:"absolute",backgroundColor:colors.chat, bottom:Utils.ScreenHeight(0.2), borderRadius:50, shadowColor:colors.blackdark,shadowOpacity:0.5,shadowOffset:5} }>
+            <View style={{position:"absolute",backgroundColor:colors.primary, bottom:Utils.ScreenHeight(0.2), borderRadius:50, shadowColor:colors.blackdark,shadowOpacity:0.5,shadowOffset:5} }>
                 <Image
                     source={activeIcon}
                     style={{ tintColor:colors.white,width:Utils.ScreenHeight(5), height:Utils.ScreenHeight(5),margin:Utils.ScreenHeight(1), resizeMode:"contain" }} />
@@ -85,7 +85,7 @@ function ClientTabNavigator() {
                     headerTitle: "",
                 headerLeft: (title) => {
                     return (
-                        <Text style={{ color: colors.primary, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>CareerCrafters</Text>
+                        <Text style={{ color: colors.primary, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Choose Lyf</Text>
                     )
                 },
                 headerRight: () => {
@@ -139,13 +139,13 @@ function ClientTabNavigator() {
             />
 
             <Tab.Screen
-                name="Crowd funding"
-                component={community}
+                name="Documents"
+                component={UploadDocuments}
                 options={{
                     headerTitle: "",
                 headerLeft: (title) => {
                     return (
-                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Crowd funding</Text>
+                        <Text style={{ color: colors.black, fontSize: 20, fontWeight: 600, marginLeft: Utils.ScreenWidth(5) }}>Your Documents</Text>
                     )
                 },
                 headerRight: () => {
@@ -187,9 +187,9 @@ function ClientTabNavigator() {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <RenderTabIcon
-                                title="Community"
+                                title="Documents"
                                 isFocused={focused}
-                                activeIcon={ImagesPath.home.community}
+                                activeIcon={ImagesPath.LegalBridge.document}
                             // inActiveIcon={ImagesPath.Tabbar.bottom_k}
                             // title={"Katlego"}
                             />
@@ -303,9 +303,9 @@ function ClientTabNavigator() {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <RenderTabIcon
-                                title="Analysis"
+                                title="Well Being"
                                 isFocused={focused}
-                                activeIcon={ImagesPath.LegalBridge.document}
+                                activeIcon={ImagesPath.home.community}
                             // inActiveIcon={ImagesPath.Tabbar.bottom_k}
                             // title={"Katlego"}
                             />

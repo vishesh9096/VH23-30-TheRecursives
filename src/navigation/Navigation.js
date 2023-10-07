@@ -38,6 +38,18 @@ import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import VoicePrescription from '../screens/VoicePrescription/VoicePrescription';
 import PatientsList from '../screens/PatientsList/PatientsList';
 import LoginDoctor from '../screens/LoginLawyer/LoginDoctor';
+import CalendarScreen from '../screens/Calendar/CalendarScreen';
+import SearchMedicines from '../screens/SearchMedicines/SearchMedicines';
+import MedicineDetails from '../screens/MedicineDetails/MedicineDetails';
+import ClientSearchScreen from '../screens/ClientSearchScreen/ClientSearchScreen';
+import LawyerDetails from '../screens/LawyerDetails/LawyerDetails';
+import UploadDocuments from '../screens/UploadDocuments/UploadDocuments';
+import ConnectDevice from '../screens/ConnectDevice/ConnectDevice';
+import Steps from '../screens/Steps/Steps';
+import Calories from '../screens/Calories/Calories';
+import HeartRate from '../screens/HeartRate/HeartRate';
+import Actvity from '../screens/Actvity/Actvity';
+import PatientRecords from '../screens/PatientRecords/PatientRecords';
 
 
 
@@ -62,6 +74,12 @@ function Navigation() {
                 <Stack.Screen name="Notification" component={Notification} />
                 <Stack.Screen name="ClientProfile" component={ClientProfile} />
                 <Stack.Screen name="policies" component={policies} />
+                <Stack.Screen name="CalendarScreen" component={CalendarScreen} />
+                <Stack.Screen name="SearchMedicines" component={SearchMedicines} />
+                <Stack.Screen name="MedicineDetails" component={MedicineDetails} />
+                <Stack.Screen name="ClientSearchScreen" component={ClientSearchScreen} />
+                <Stack.Screen name="LawyerDetails" component={LawyerDetails} />
+                <Stack.Screen name="PatientRecords" component={PatientRecords} />
                
 
                 <Stack.Screen name="VideoCall" component={VideoCall} />
@@ -73,6 +91,7 @@ function Navigation() {
                 <Stack.Screen name="VerifyotpDoctor" component={VerifyotpDoctor} />
                 <Stack.Screen name="VoicePrescription" component={VoicePrescription} />
                 <Stack.Screen name="PatientsList" component={PatientsList} />
+                {/* <Stack.Screen name="UploadDocuments" component={UploadDocuments} /> */}
 
 
 
@@ -85,6 +104,7 @@ function Navigation() {
 
                 {/* Client screens */}
                 <Stack.Screen name="Loginclient" component={Loginclient} />
+                <Stack.Screen name="ConnectDevice" component={ConnectDevice} />
                 <Stack.Screen name="ConnectWalletScreen" component={ConnectWalletScreen} />
                 <Stack.Screen name="Signupclient" component={Signupclient} />
                 <Stack.Screen name="Verifyotpclient" component={Verifyotpclient} />
@@ -97,14 +117,19 @@ function Navigation() {
                 <Stack.Screen name="LindedinJobs" component={LindedinJobs} />
                 <Stack.Screen name="Courses" component={Courses} />
                 <Stack.Screen name="Interview" component={Interview} />
-                <Stack.Screen name="ChatFeature" component={ChatFeature} />
+
+                <Stack.Screen name="Steps" component={Steps} />
+                <Stack.Screen name="Calories" component={Calories} />
+                <Stack.Screen name="HeartRate" component={HeartRate} />
+                <Stack.Screen name="Actvity" component={Actvity} />
+                {/* <Stack.Screen name="ChatFeature" component={ChatFeature} />
                 <Stack.Screen name="FbLogin1" component={FbLogin1} />
-                <Stack.Screen name="RegisterL" component={RegisterL} />
+                <Stack.Screen name="RegisterL" component={RegisterL} /> */}
                 <Stack.Screen 
                 options={{ gestureEnabled: false }}
                 name="ClientTabNavigator" component={ClientTabNavigator} />
 
-                <Stack.Screen options={{ gestureEnabled: false }} name="ClientTabNavigator" component={ClientTabNavigator} />
+              
                 
 
 

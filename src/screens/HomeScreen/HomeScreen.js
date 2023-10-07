@@ -89,13 +89,13 @@ const HomeScreen = (props) => {
                 <View style={{ width: '100%', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: Utils.ScreenHeight(3) }}>
                         <TouchableOpacity onPress={() => {
-                            navigation.navigate('CalenderScreen')
+                            navigation.navigate('CalendarScreen')
                         }} style={{ width: '45%', height: Utils.ScreenHeight(21), borderWidth: 1, borderColor: colors.primary, borderRadius: 7, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', elevation: 10, backgroundColor: colors.white }}>
                             <Image style={styles.addIconCss} source={ImagesPath.home.calender} />
                             <Text style={{ textAlign: 'center', fontSize: 14, color: colors.primary, fontWeight: 'bold', marginVertical: 7 }}>Calender</Text>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => {
-                            navigation.navigate('PatientsScreen')
+                            navigation.navigate('ClientSearchScreen')
                         }} style={{ width: '45%', height: Utils.ScreenHeight(21), borderWidth: 1, borderColor: colors.primary, borderRadius: 7, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', elevation: 10, backgroundColor: colors.white }}>
                             <Image style={styles.addIconCss} source={ImagesPath.home.patient_info} />
                             <Text style={{ textAlign: 'center', fontSize: 14, color: colors.primary, fontWeight: 'bold', marginVertical: 7 }}>Patient</Text>

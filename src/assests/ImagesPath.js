@@ -208,6 +208,11 @@ const ImagesPath = {
         virtualreality: require('./images/LegalBridge/virtualreality.png'),
         job: require('./images/LegalBridge/job.png'),
         graph: require('./images/LegalBridge/graph.png'),
+        im1: require('./images/LegalBridge/im1.png'),
+        im2: require('./images/LegalBridge/im2.png'),
+        im3: require('./images/LegalBridge/im3.png'),
+        im4: require('./images/LegalBridge/im4.png'),
+        im5: require('./images/LegalBridge/im5.png'),
         // career: require('./images/LegalBridge/logocar.png'),
 
     }

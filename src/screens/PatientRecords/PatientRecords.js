@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, ActivityIndicator, Clipboard } from 'react-native'
+import { View, Text, Image, TouchableOpacity, ActivityIndicator, Clipboard, SafeAreaView, Modal } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import styles from "./styles";
 import { Utils, colors } from '../../contants';
@@ -9,8 +9,9 @@ import Uploadtoipfs from '../Uploadtoipfs/Uploadtoipfs';
 import { useNavigation } from '@react-navigation/native';
 import DocumentPicker from 'react-native-document-picker';
 import axios from 'axios';
+import WebView from 'react-native-webview';
 
-const UploadDocuments = () => {
+const PatientRecords = () => {
     const navigation = useNavigation();
     const fetchdata =()=>{
         setloader(true)
@@ -57,11 +58,16 @@ const UploadDocuments = () => {
             </View>
             
             <TouchableOpacity 
-            onPress={()=>{Clipboard.setString(base+item?.hash_value)}}
+            onPress={()=>{
+                
+                setimgurl(base+item?.hash_value)
+                Clipboard.setString(base+item?.hash_value)
+            setVisible(!visible)
+            }}
             style={{backgroundColor:colors.secondary, borderRadius:12}}>
               <Text style={{paddingVertical:Utils.ScreenHeight(0.8),
                 fontWeight:600,
-                paddingHorizontal:Utils.ScreenWidth(5), color:colors.primary}}>Share</Text>
+                paddingHorizontal:Utils.ScreenWidth(5), color:colors.primary}}>View</Text>
             </TouchableOpacity>
         </View>
             
@@ -78,7 +84,9 @@ const UploadDocuments = () => {
     const [data,setdata] = useState([]) 
 
     const [uploadedCID, setUploadedCID] = useState(null);
+    const [visible, setVisible] = useState(false);
   const[name,setname ] = useState("")
+  const[imgurl,setimgurl ] = useState("")
   
 
   const pinFileToIPFS = async () => {
@@ -155,24 +163,16 @@ const UploadDocuments = () => {
   return (
     <>
      {loader ? (
-            <View style={{ alignItems: 'center', justifyContent:"center", flex:1}}>
+            <SafeAreaView style={{ alignItems: 'center', justifyContent:"center", flex:1}}>
               <ActivityIndicator size="large" color={colors.primary} />
               <Text>Please wait </Text>
-            </View>
+            </SafeAreaView>
           ) : (
-    <View style={{paddingHorizontal:Utils.ScreenWidth(4), flex:1,backgroundColor:colors.white}}>
+    
+    <View style={{paddingHorizontal:Utils.ScreenWidth(4),paddingTop:Utils.ScreenHeight(5),  flex:1,backgroundColor:colors.white}}>
        
-       <TouchableOpacity 
-        onPress={()=>{pinFileToIPFS()}}
-        style={{
-            justifyContent:"center",
-            width:Utils.ScreenWidth(90),alignSelf:"center", borderWidth:1,borderColor:colors.grey, height:Utils.ScreenHeight(16), marginTop:Utils.ScreenHeight(3), borderColor:colors.primary, borderRadius:16, borderStyle:"dashed"}}>
-                <Image source={ImagesPath.onafterprint.upload}
-                style={{resizeMode:"contain", height:Utils.ScreenHeight(4), width:Utils.ScreenWidth(10), tintColor:colors.primary, alignSelf:"center"}}
-                />
-                <Text style={{marginTop:Utils.ScreenHeight(1), fontSize:Utils.ScreenHeight(2), color:colors.primary, textAlign:"center"}}>Upload Your Documents Here</Text>
-        </TouchableOpacity>
-      <Text style={styles.heading}>Recently Uploaded</Text>
+      
+      <Text style={styles.heading}>Recently Uploaded Medical Documents by Vishesh</Text>
       <View>
         <View>
             <FlatList
@@ -184,10 +184,23 @@ const UploadDocuments = () => {
             
         </View>
       </View>
+      <Modal
+        visible={visible}
+        presentationStyle={'pageSheet'}
+        animationType={'slide'}
+        onRequestClose={() => setVisible(!visible)}>
+        <WebView 
+        source={{uri:imgurl}} 
+        />
+    </Modal>
     </View>
+    
           )}
     </>
+      
   )
 }
 
-export default UploadDocuments
+
+
+export default PatientRecords

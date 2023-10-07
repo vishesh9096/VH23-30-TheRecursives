@@ -8,12 +8,14 @@ const styles = StyleSheet.create({
         backgroundColor: '#F8FFFF'
     },
     pdf: {
-        //flex: 1,
+        flex: 1,
         alignSelf:'center',
-        backgroundColor: '#f8ffff',
+        backgroundColor:colors.grey2,
         //justifyContent:'center',
-        marginTop:Utils.ScreenHeight(5),
-        width: Utils.ScreenWidth(110),
+        // marginTop:Utils.ScreenHeight(2),
+        // borderWidth:1,
+        // borderColor:colors.grey2,
+        width: Utils.ScreenWidth(90),
         height: Utils.ScreenWidth(130)
     },
     backViewCss: {

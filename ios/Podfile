@@ -30,9 +30,6 @@ end
 
 target 'reactnativestarter' do
   use_expo_modules!
-  use_modular_headers!
-  pod 'FirebaseCore', :modular_headers => true
-  pod 'FirebaseCoreInternal', :modular_headers => true
   post_integrate do |installer|
     begin
       expo_patch_react_imports!(installer)

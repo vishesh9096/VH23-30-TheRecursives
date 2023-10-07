@@ -35,6 +35,7 @@ const PersonalDetails = (props) => {
     const[loader,setloader] = useState(false)
     const[takequiz,settakequiz] = useState(false)
     const[button,setbutton] = useState(true)
+   
     const uploadImage = async () => {
         
         setoutput(false);

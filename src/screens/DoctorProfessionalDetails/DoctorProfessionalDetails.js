@@ -17,7 +17,10 @@ import { Modal } from "react-native";
 import ImagePicker from 'react-native-image-crop-picker';
 
 const DoctorProfessionalDetails = React.memo((props) => {
-    const { navigation, route } = props;
+    const { navigation, route} = props;
+
+    const user = route.params.user
+    console.log("idar ", user)
     const dob = props?.route?.params?.dob
     const input_last = useRef(null)
     const input_alt = useRef(null)
@@ -32,7 +35,7 @@ const DoctorProfessionalDetails = React.memo((props) => {
     const [imgQua6, setImgQua6] = useState('');
     //console.log('DOB>>>>>>>>>>>',dob)
 
-    const [user, setUser] = useState({ firstName: '', lastName: '', altNumber: '', experience: '', password: '', email: '' })
+    // const [user, setUser] = useState({ firstName: '', lastName: '', altNumber: '', experience: '', password: '', email: '' })
     const [refes, setRefes] = useState(false);
     const showLoader = () => setLoaderVisible(true);
     const hideLoader = () => setLoaderVisible(false);
@@ -71,78 +74,110 @@ const DoctorProfessionalDetails = React.memo((props) => {
     ]);
 
     const getProfessionalDetails = () => {
-        if (!number) {
-            Helper.showToast('Please enter your Registration Number');
-            return;
-        }
-        if (!valueSpecialization) {
-            Helper.showToast('Please enter your Specialization');
-            return;
-        }
-        if (!valueDegrees) {
-            Helper.showToast('Please enter your degree');
-            return;
-        }
-        if (!imgQua1) {
-            Helper.showToast('Please enter your Registration Proof');
-            return;
-        }
-        if (!experience) {
-            Helper.showToast('Please enter your Experience');
-            return;
-        }
-        if (!aadhaarNum) {
-            Helper.showToast('Please enter your Aadhaar Number');
-            return;
-        }
-        if (aadhaarNum.length < 12) {
-            Helper.showToast('Please enter valid Aadhaar Number');
-            return;
-        }
-        if (!imgQua4) {
-            Helper.showToast('Please enter your Aadhaar Card');
-            return;
-        }
-        let formdata = new FormData();
-        formdata.append('reg_number', number);
-        if (imgQua1) {
-            formdata.append('registration_image', {
-                'uri': imgQua1,
-                'type': "image/jpeg",
-                'name': Date.now() + "image1.jpg",
-            });
-        }
-        formdata.append('specialization', valueSpecialization);
-        formdata.append('experience', experience);
-        formdata.append('course_name', valueDegrees === 'Other' ? valueDegreeInput : valueDegrees);
-        formdata.append('aadhar_number', aadhaarNum);
-        if (imgQua4) {
-            formdata.append('aadhar_image', {
-                'uri': imgQua4,
-                'type': "image/jpeg",
-                'name': Date.now() + "image2.jpg",
-            });
-        }
+        // if (!number) {
+        //     Helper.showToast('Please enter your Registration Number');
+        //     return;
+        // }
+        // if (!valueSpecialization) {
+        //     Helper.showToast('Please enter your Specialization');
+        //     return;
+        // }
+        // if (!valueDegrees) {
+        //     Helper.showToast('Please enter your degree');
+        //     return;
+        // }
+        // if (!imgQua1) {
+        //     Helper.showToast('Please enter your Registration Proof');
+        //     return;
+        // }
+        // if (!experience) {
+        //     Helper.showToast('Please enter your Experience');
+        //     return;
+        // }
+        // if (!aadhaarNum) {
+        //     Helper.showToast('Please enter your Aadhaar Number');
+        //     return;
+        // }
+        // if (aadhaarNum.length < 12) {
+        //     Helper.showToast('Please enter valid Aadhaar Number');
+        //     return;
+        // }
+        // if (!imgQua4) {
+        //     Helper.showToast('Please enter your Aadhaar Card');
+        //     return;
+        // }
+        // let formdata = new FormData();
+        // formdata.append('reg_number', number);
+        // if (imgQua1) {
+        //     formdata.append('registration_image', {
+        //         'uri': imgQua1,
+        //         'type': "image/jpeg",
+        //         'name': Date.now() + "image1.jpg",
+        //     });
+        // }
+        // formdata.append('specialization', valueSpecialization);
+        // formdata.append('experience', experience);
+        // formdata.append('course_name', valueDegrees === 'Other' ? valueDegreeInput : valueDegrees);
+        // formdata.append('aadhar_number', aadhaarNum);
+        // if (imgQua4) {
+        //     formdata.append('aadhar_image', {
+        //         'uri': imgQua4,
+        //         'type': "image/jpeg",
+        //         'name': Date.now() + "image2.jpg",
+        //     });
+        // }
         // return
         showLoader(true);
-        Helper.makeRequest({ url: ApiUrl.professionalDetails, data: formdata, method: "FORMDATA" }).then((data) => {
-            hideLoader(false)
-            if (data.status === "success") {
-                Helper.setData('userdata', data.data);
-                // setImgQua1('');
-                // setImgQua2('');
-                // setImgQua3('');
-                navigation.navigate('OnboardingScreen8')
-            } else {
-                hideLoader(false);
-                Helper.showToast(data.message)
-            }
-            // Helper.showToast(data.message)
-        }).catch(err => {
-            console.log("----err::: ", err)
-            // Helper.showToast(err.message)
-            hideLoader(false);
-        })
+        // Helper.makeRequest({ url: ApiUrl.professionalDetails, data: formdata, method: "FORMDATA" }).then((data) => {
+        //     hideLoader(false)
+        //     if (data.status === "success") {
+        //         Helper.setData('userdata', data.data);
+        //         // setImgQua1('');
+        //         // setImgQua2('');
+        //         // setImgQua3('');
+        //         navigation.navigate('OnboardingScreen8')
+        //     } else {
+        //         hideLoader(false);
+        //         Helper.showToast(data.message)
+        //     }
+        //     // Helper.showToast(data.message)
+        // }).catch(err => {
+        //     console.log("----err::: ", err)
+        //     // Helper.showToast(err.message)
+        //     hideLoader(false);
+        // })
+        var formdata = new FormData();
+formdata.append("mobile_no", "998703578381");
+formdata.append("user_type", "doctor");
+formdata.append("first_name", "Vishesh");
+formdata.append("last_name", "Gatha");
+formdata.append("email", "gathavishesh@gmail.com");
+formdata.append("hospital_affiliation", "Kama");
+formdata.append("license_number", "11111111111111111111");
+formdata.append("years_of_experience", "12");
+formdata.append("website", "google.com");
+formdata.append("address", "Mumbai");
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+setLoaderVisible(true)
+fetch("https://8344-103-134-7-130.ngrok-free.app/api/user-registration/", requestOptions)
+  .then(response => response.json())
+  .then(result =>{
+    setLoaderVisible(false)
+    console.log(result.letter_head_url)
+    navigation.navigate("LetterHeadScreen", {url:result.letter_head_url})
+  }
+    )
+  .catch(error =>{ 
+    setLoaderVisible(false)
+    console.log('error', error)
+
+
+});
     }
 
     const handleInput = (text) => {
@@ -681,7 +716,7 @@ const DoctorProfessionalDetails = React.memo((props) => {
                     <AppButton
                         title="Continue"
                         buttonWidth={Utils.ScreenWidth(90)}
-                        onPress={() => { navigation.navigate("LetterHeadScreen") }}
+                        onPress={() => { getProfessionalDetails() }}
                     //onPress={() => { navigation.navigate('OnboardingScreen8') }}
                     />
                 </View>

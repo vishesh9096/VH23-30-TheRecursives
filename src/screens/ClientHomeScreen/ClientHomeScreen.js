@@ -44,7 +44,7 @@ const ClientHomeScreen = () => {
                         <Text style={{fontSize:12, color:colors.grey, fontWeight:300}}> {item.header} </Text>
                         <Text style={{fontSize:15, fontWeight:400}}> {item.title} </Text>
                         <Text style={{fontSize:12, color:colors.grey, fontWeight:300}}>{item.duration} </Text>
-                       
+                        
                     </View>
                 </View>
 
@@ -72,17 +72,29 @@ const ClientHomeScreen = () => {
                     </TouchableOpacity>
 
                 </View>
-                <ScrollView horizontal>
-                <View style={{marginTop:Utils.ScreenHeight(5), marginHorizontal:Utils.ScreenWidth(5)}}>
-                <TouchableOpacity style={{height:Utils.ScreenHeight(18), width:Utils.ScreenWidth(40), backgroundColor:colors.primary}}>
-                  <Image source={ImagesPath.LegalBridge.courses} style={{height:Utils.ScreenHeight(18), width:Utils.ScreenWidth(45), resizeMode:"strech"}}/>
+                <TouchableOpacity style={{alignSelf:"center", marginTop:Utils.ScreenHeight(3)}}>
+                      <Image style={{ height:Utils.ScreenHeight(14), width:Utils.ScreenWidth(90), borderRadius:15}} source={ImagesPath.LegalBridge.im1}/>
+                    </TouchableOpacity>
+                <TouchableOpacity style={{alignSelf:"center", marginTop:Utils.ScreenHeight(3)}}>
+                      <Image style={{ height:Utils.ScreenHeight(14), width:Utils.ScreenWidth(90), borderRadius:15}} source={ImagesPath.LegalBridge.im2}/>
+                    </TouchableOpacity>
+                <ScrollView horizontal style={{marginHorizontal:Utils.ScreenWidth(4)}}>
+                <View style={{marginTop:Utils.ScreenHeight(5), marginHorizontal:Utils.ScreenWidth(2)}}>
+                <TouchableOpacity style={{height:Utils.ScreenHeight(12), width:Utils.ScreenWidth(28),}}>
+                  <Image source={ImagesPath.LegalBridge.im3} style={{height:Utils.ScreenHeight(12), width:Utils.ScreenWidth(28), resizeMode:"contain"}}/>
                 </TouchableOpacity>
                 </View>
-                <View style={{marginTop:Utils.ScreenHeight(5), marginHorizontal:Utils.ScreenWidth(5)}}>
-                <TouchableOpacity style={{height:Utils.ScreenHeight(18), width:Utils.ScreenWidth(40), backgroundColor:colors.primary}}>
-                  <Image source={ImagesPath.LegalBridge.development} style={{height:Utils.ScreenHeight(18), width:Utils.ScreenWidth(45), resizeMode:"strech"}}/>
+                <View style={{marginTop:Utils.ScreenHeight(5), marginHorizontal:Utils.ScreenWidth(2)}}>
+                <TouchableOpacity style={{height:Utils.ScreenHeight(12), width:Utils.ScreenWidth(28),}}>
+                  <Image source={ImagesPath.LegalBridge.im4} style={{height:Utils.ScreenHeight(12), width:Utils.ScreenWidth(28), resizeMode:"contain"}}/>
                 </TouchableOpacity>
                 </View>
+                <View style={{marginTop:Utils.ScreenHeight(5), marginHorizontal:Utils.ScreenWidth(2)}}>
+                <TouchableOpacity style={{height:Utils.ScreenHeight(12), width:Utils.ScreenWidth(28)}}>
+                  <Image source={ImagesPath.LegalBridge.im5} style={{height:Utils.ScreenHeight(14), width:Utils.ScreenWidth(34), resizeMode:"contain"}}/>
+                </TouchableOpacity>
+                </View>
+               
                 </ScrollView>
 
                 
@@ -99,8 +111,8 @@ const ClientHomeScreen = () => {
                 </View>
 
                 <View>
-                  <Text style={{fontSize:Utils.ScreenHeight(1.8),fontWeight:450}}>TODAY'S MEETING</Text>
-                  <Text style={{fontWeight:300, marginTop:Utils.ScreenHeight(1), fontSize:Utils.ScreenHeight(1.5)}}>Appoinment with {'\n'}Mr Vishesh Gatha</Text>
+                  <Text style={{fontSize:Utils.ScreenHeight(1.8),fontWeight:450}}>TODAY'S Appoinment</Text>
+                  <Text style={{fontWeight:300, marginTop:Utils.ScreenHeight(1), fontSize:Utils.ScreenHeight(1.5)}}>Appoinment with {'\n'}Dr Vishesh Gatha</Text>
                   <TouchableOpacity 
                   onPress={()=>{navigation.navigate("VideoCall")}}
                   style={{alignSelf:"center", marginTop:Utils.ScreenHeight(1)
@@ -113,7 +125,7 @@ const ClientHomeScreen = () => {
                   </TouchableOpacity>
                 </View>
                 </View>
-                <View style={{marginTop:Utils.ScreenHeight(3)}}>
+                {/* <View style={{marginTop:Utils.ScreenHeight(3)}}>
                 <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                         <Text style={{ marginHorizontal: Utils.ScreenWidth(4), fontSize: 18, fontWeight: 600, marginBottom: Utils.ScreenHeight(1.5) }}>Quick Tabs </Text>
                         <Text style={{ marginHorizontal: Utils.ScreenWidth(4), fontSize: 14, fontWeight: 400, marginBottom: Utils.ScreenHeight(1.5), color: colors.grey }}>View All</Text>
@@ -144,24 +156,34 @@ const ClientHomeScreen = () => {
                    
                    
                     </View>
-                    <TouchableOpacity style={{alignSelf:"center"}}>
-                      <Image style={{ height:Utils.ScreenHeight(14), width:Utils.ScreenWidth(90), borderRadius:15}} source={ImagesPath.LegalBridge.virtualreality}/>
-                    </TouchableOpacity>
+                    
                     
 
                   </View>
                 
                 </View>
-                
+                 */}
                 <View style={{ marginTop: Utils.ScreenHeight(3),marginHorizontal: Utils.ScreenWidth(4) }}>
                     <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                         <Text style={{  fontSize: 18, fontWeight: 600, marginBottom: Utils.ScreenHeight(1.5) }}>Explore</Text>
 
                     </View>
-                    <FlatList
+                    {/* <FlatList
 
-                        data={latestdata} renderItem={latest} />
+                        data={latestdata} renderItem={latest} /> */}
                 </View>
+
+                <TouchableOpacity
+                  onPress={()=>{navigation.navigate("policies")}}
+                  style={{borderWidth:1,
+                      flexDirection:"row", justifyContent:"space-evenly",alignItems:"center",
+                      height:Utils.ScreenHeight(15), width:Utils.ScreenWidth(94),borderRadius:12, marginTop:Utils.ScreenHeight(3),backgroundColor:colors.white, alignSelf:"center", borderColor:colors.grey2}}>
+                  <Image source={{uri:"https://cdn-icons-png.flaticon.com/512/3112/3112993.png"}}
+                  style={{height:Utils.ScreenHeight(18), color: colors.primary, width:Utils.ScreenWidth(28), resizeMode:"contain" }}
+                  />
+                  <Text style={{fontSize:Utils.ScreenHeight(2), color: colors.primary, fontWeight:500}}>Anonymous Appoinment</Text>
+
+                  </TouchableOpacity>
 
 
 

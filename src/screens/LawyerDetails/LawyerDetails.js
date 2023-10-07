@@ -17,7 +17,7 @@ const LawyerDetails = () => {
                         onPress={() => { navigation.goBack() }}>
                         <Image source={ImagesPath.signUp.backIcon} style={{ height: Utils.ScreenHeight(4), width: Utils.ScreenWidth(5), tintColor: colors.blackdark, resizeMode: "contain" }} />
                     </TouchableOpacity>
-                    <Text style={{ flex: 1, textAlign: "center", marginRight: Utils.ScreenWidth(5), fontSize: 20, fontWeight: "600" }}>Lawyer Details</Text>
+                    <Text style={{ flex: 1, textAlign: "center", marginRight: Utils.ScreenWidth(5), fontSize: 20, fontWeight: "600" }}>Patient Details</Text>
                 </View>
                 <ScrollView style={{backgroundColor:colors.white,
                     height:Utils.ScreenHeight(100),
@@ -33,7 +33,7 @@ const LawyerDetails = () => {
                       <Text style={{fontWeight:400, color:colors.grey, fontSize:11}}>Speciality:Family Matters</Text>
                     </View>
                     <View style={{flex:1,alignSelf:"center", marginLeft:Utils.ScreenHeight(4)}}>
-                    <Text style={{fontWeight:300, color:colors.grey, fontSize:12}}>Reviews</Text>
+                    {/* <Text style={{fontWeight:300, color:colors.grey, fontSize:12}}>Reviews</Text>
                     <View style={{flexDirection:"row", alignItems:"center"}}>
                         <Image source={ImagesPath.home.star} style={{height:Utils.ScreenHeight(2.1),width:Utils.ScreenHeight(2.1)}}/>
                         <Image source={ImagesPath.home.star} style={{height:Utils.ScreenHeight(2.1),width:Utils.ScreenHeight(2.1)}}/>
@@ -42,7 +42,7 @@ const LawyerDetails = () => {
                         <Image source={ImagesPath.home.star} style={{height:Utils.ScreenHeight(2.1),width:Utils.ScreenHeight(2.1)}}/>
                
                   
-                    </View>
+                    </View> */}
                     </View>
                     </View>
                     <View style={{width:"100%", 
@@ -51,12 +51,12 @@ const LawyerDetails = () => {
 
                     <View style={{marginTop:Utils.ScreenHeight(2), flexDirection:"row", alignItems:"center", justifyContent:"flex-start"}}>
                     <View style={{}}>
-                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Qualification</Text>
-                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11}}>Harvard Law School </Text>
+                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Age</Text>
+                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11}}>20 years</Text>
                     </View>
                     <View style={{marginLeft:Utils.ScreenWidth(25)}}>
-                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Experience</Text>
-                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11}}>5 yrs </Text>
+                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Address</Text>
+                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11}}>Mumbai </Text>
 
                     </View>
                     </View>
@@ -73,30 +73,32 @@ const LawyerDetails = () => {
                     <View style={{width:"100%", 
                     marginTop:Utils.ScreenHeight(2),
                     height:Utils.ScreenHeight(0.1),backgroundColor:colors.grey2}}></View>
-                    <View style={{marginTop:Utils.ScreenHeight(2), flexDirection:"row", alignItems:"center", justifyContent:"flex-start"}}>
+                    {/* <View style={{marginTop:Utils.ScreenHeight(2), flexDirection:"row", alignItems:"center", justifyContent:"flex-start"}}>
                     <View style={{}}>
                     <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Fees</Text>
                       <Text style={{fontWeight:400, color:colors.grey, fontSize:11, marginTop:Utils.ScreenHeight(0.5)}}>Rs 2000 for Consultancy  </Text>
                     </View>
                    
-                    </View>
-                    <View style={{width:"100%", 
+                    </View> */}
+                    {/* <View style={{width:"100%", 
                     marginTop:Utils.ScreenHeight(2),
-                    height:Utils.ScreenHeight(0.1),backgroundColor:colors.grey2}}></View>
+                    height:Utils.ScreenHeight(0.1),backgroundColor:colors.grey2}}></View> */}
                     <View style={{marginTop:Utils.ScreenHeight(2), flexDirection:"row", alignItems:"center", justifyContent:"flex-start"}}>
-                    <View style={{}}>
-                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Availability</Text>
-                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11, marginTop:Utils.ScreenHeight(0.5)}}>Monday-Friday{'\n'} - 5:00 pm-8:00 pm </Text>
-                    </View>
+                    <TouchableOpacity 
+                    onPress={()=>{navigation.navigate("PatientRecords")}}
+                    style={{}}>
+                    <Text style={{fontWeight:600, fontSize:Utils.ScreenHeight(1.8)}}>Medical Reports</Text>
+                      <Text style={{fontWeight:400, color:colors.grey, fontSize:11, marginTop:Utils.ScreenHeight(0.5)}}>NA </Text>
+                    </TouchableOpacity>
                    
                     </View>
                     <View style={{marginTop:Utils.ScreenHeight(8), flex:1, justifyContent:"center", alignItems:"center"}}>
                         <TouchableOpacity 
-                        onPress={()=>{navigation.navigate("BookAppoinment")}}
+                        onPress={()=>{navigation.navigate("VoicePrescription")}}
                         style={{
                             justifyContent:"center",
                             height:Utils.ScreenHeight(6), width:Utils.ScreenWidth(55), backgroundColor:colors.primary, borderRadius:12}}>
-                                <Text style={{textAlign:"center", fontSize:Utils.ScreenHeight(2.5), color:colors.white, fontWeight:500}}>Book Appoinment</Text>
+                                <Text style={{textAlign:"center", fontSize:Utils.ScreenHeight(2.5), color:colors.white, fontWeight:500}}>Create Prescription</Text>
                         </TouchableOpacity>
 
                     </View>
