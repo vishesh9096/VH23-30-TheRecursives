@@ -51,6 +51,7 @@ import HeartRate from '../screens/HeartRate/HeartRate';
 import Actvity from '../screens/Actvity/Actvity';
 import PatientRecords from '../screens/PatientRecords/PatientRecords';
 import ReportsOCR from '../screens/ReportsOCR/ReportsOCR';
+import HealthRecords from '../screens/HealthRecords/HealthRecords';
 
 
 
@@ -65,7 +66,7 @@ function Navigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="ReportsOCR"
+                initialRouteName="Splash"
                 screenOptions={{ headerShown: false }}>
                  <Stack.Screen name="Splash" component={Splash} />
                  <Stack.Screen name="HomeScreen" component={HomeScreen} />
@@ -130,6 +131,7 @@ function Navigation() {
                 <Stack.Screen 
                 options={{ gestureEnabled: false }}
                 name="ClientTabNavigator" component={ClientTabNavigator} />
+                <Stack.Screen name="HealthRecords" component={HealthRecords} />
 
               
                 
